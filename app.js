@@ -23,7 +23,7 @@ app.get("/contract",(req,res)=>{
 
 app.get("/getRate",async (req,res)=>{
 	var ethVal;
-	await axios.get("https://min-api.cryptocompare.com/data/price?fsym=USD&tsyms=ETH")
+	await axios.get("https://min-api.cryptocompare.com/data/price?fsym=USD&tsyms=MATIC")
 		.then(data=>{
 			ethVal=data.data;
 		})
