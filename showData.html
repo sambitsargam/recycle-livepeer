@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Video Streaming</title>
+		<script src="/socket.io/socket.io.js"></script>
+		<link rel="stylesheet" href="./static/css/showdata.css" />
+	</head>
+	<body>
+		<div class="container">
+			<div class="showStream" id="showStream">
+				<video id="camera--view" autoplay playsinline></video>
+
+				<div class="streamtitle">
+					<h1>heading goes here</h1>
+				</div>
+			<div class="buttons">
+				<button id="switchMode" onclick="screenShare()">Switch to Camera</button>
+				<button id="switchMode" onclick="stopStream()">Stop Stream</button>
+			</div>
+
+			</div>
+		
+			<div id="values" class="values">
+				<span
+					>StreamUrl:
+					<div>
+						<input
+							class="val"
+							type="text"
+							disabled
+							value="rtmp://rtmp.livepeer.com/live/"
+						/><ion-icon name="copy-outline" class="icon" onclick="copyFunction(0)"></ion-icon></div
+				></span>
+				<span
+					>Stream Key:
+					<div><input
+						class="val"
+						id="key"
+						type="text"
+						disabled
+						value="streamKey" /><ion-icon name="copy-outline" class="icon" onclick="copyFunction(1)"></ion-icon
+				></div>
+			</span>
+				<span
+					>Playback Url:
+					<div><input
+						class="val"
+						id="url"
+						type="text"
+						disabled
+						value="https://cdn.livepeer.com/hls/{playbackId}/index.m3u8" />
+					<ion-icon name="copy-outline" class="icon" onclick="copyFunction(2)"></ion-icon
+				>
+			</div></span>
+
+				<div class="captureScreen" id="streamButton">
+					<button onclick="startStream()">(Beta)Stream via browser</button>
+				</div>
+			</div>
+		</div>
+			
+
+		<!--		<div class="streamInfo">
+			stream info that was removed
+		</div>
+-->
+		<script>
+			const body = document.querySelector("body");
+			const start = document.querySelector("#streamButton button");
+			const container = document.querySelector(".container");
+			const right = document.querySelector(".streamInfo");
+			const bottom = document.querySelector(".streamtitle");
+			const icon = document.querySelector(".icon");
+
+			start.addEventListener("click", function () {
+				body.classList.add("streaming");
+				body.style.background =
+					"linear-gradient(45deg, rgb(96, 96, 255), rgb(170, 135, 235))";
+				//		right.style.display="flex"
+				//bottom.style.display="flex"
+				container.style.justifyContent = "flex-start";
+			});
+
+		</script>
+		<script
+			type="module"
+			src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+		></script>
+		<script
+			nomodule
+			src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+		></script>
+		<script src="static/js/showdata.js"></script>
+	</body>
+</html>

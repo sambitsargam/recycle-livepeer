@@ -1,0 +1,89 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Livepeer-Stream by Recycle</title>
+	<link rel="stylesheet" href="static/css/style.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2&display=swap" rel="stylesheet">
+	<link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+</head>
+
+<body>
+	
+	<div class="super">
+
+		<div class="welcome animate__animated animate__fadeIn">
+			<div class="heading"><span id="wlcm" class="animate__animated animate__fadeInLeft">Welcome</span> <span class="animate__animated animate__fadeInLeftBig"> To exciting world of livestream by Recycle Nft Marketplace.</span> </div>
+			<div class="wlcmtxt animate__animated animate__fadeInUp">Enjoy the new era of livestream with control in your hands</div>
+			<ion-icon name="caret-down" class="xplor animate__animated" onclick="goDown()"></ion-icon><br><br>
+			<a type="button" style="background-color: turquoise; border: none; border-radius: 5px; color: #333; /* Dark grey */ padding: 15px 32px"href="https://recycle-nft.vercel.app/" target="_blank">MARKETPLACE</a>
+
+		</div>
+
+		<div id="btns" class="btns">
+				<div class="card1 animate__animated ">
+					<div class="cardheading">
+						Create Stream
+					</div>
+					<div class="cardtxt">
+						Let the world know what you wish to show,
+					
+						 Create a stream and Go live  now.
+					
+					</div>
+
+					<button onclick="create()" class="btn create">
+						<span>Create Stream</span>
+						<ion-icon name="videocam-outline" class="icon"></ion-icon>
+					</button>
+				</div>
+
+
+				<div class="card2 animate__animated ">
+					<div class="cardheading">
+						Watch Stream
+					</div>
+					<div class="cardtxt">
+						Take a look at what the world is doing,
+						 Explore rich
+						collection of livestreams now.
+					</div>
+
+					<button onclick="triggerWatch()" class="btn join">
+						<span>Watch Stream</span>
+						<ion-icon name="play-circle-outline" class="icon"></ion-icon>
+					</button>
+				</div>
+
+				<div id="watch" class="watch">
+						<span onclick="goBack()" class="back"><ion-icon name="arrow-back-circle-outline" class="icon"></ion-icon> Go Back</span>
+						<input id="urlInp" class="urlInp" type="text" placeholder="Enter Stream Url" />
+						<button id="watchBtn" class="watchBtn btn" onclick="watch()">Watch</button>
+				</div>
+			</div>
+			<div>
+				<footer>
+					<div class="footer-txt">
+						<center><h2>Copyright &copy; 2022 Livepeer-Stream by Recycle nft</h2></center>
+					</div>
+				</footer>
+			</div>
+
+	</div>
+	<!--	<script src="https://cdn.jsdelivr.net/gh/ethereum/web3.js@1.0.0-beta.34/dist/web3.min.js"></script>-->
+	<script src="static/js/script.js"></script>
+	<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+	<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>
