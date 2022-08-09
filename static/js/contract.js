@@ -1,4 +1,4 @@
-const contractAddress = "0x8628d91e8311b4856ae7d3e317a0e8fff48e0f98";
+const contractAddress = "0x46E9492E532567339F1bF2aFd679b21391ae6a0f";
 const expectedBlockTime = 1000;
 const url = 'https://rpc-mumbai.maticvigil.com';
 const abi = [{
